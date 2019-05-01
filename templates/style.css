@@ -5,3 +5,15 @@
     
     background: rgb(255, 255, 255);
   }
+
+  
+.whitebox {
+min-height: 50px;
+padding: 10px;
+
+margin: 10px;
+font-weight: 400;
+color: rgb(19, 2, 2);
+
+background: rgb(255, 255, 255);
+}

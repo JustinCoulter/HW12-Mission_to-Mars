@@ -27,13 +27,15 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8">
-                <img src="{{mars.featured_image_url}}"" style="height:500px;" alt="mars_photo">   
+            <div class="col-md-8 justify-content-md-center whitebox rounded-sm">
+                <img src="{{mars.featured_image_url}}" class="img-fluid" style="height:500px;" alt="mars_photo">   
             </div>
-            <div class="col-md-4">
-                <h5>Table</h5>
+            <div class="justify-content-md-center whitebox rounded-sm col-md-4">
+                <h5>Mars Info</h5>
 
                 {{ mars.html_table|safe }}
+
+                <h5>Latest Weather report</h5>
                 
                 <p>{{mars.mars_weather}}</p>
             
