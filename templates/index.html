@@ -11,48 +11,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="background-color:rgb(229, 248, 246)">
     <div class="container">
 
         <div class="jumbotron text-center">
-            <h1>Mission to Mars</h1>
+            <h1 style="color:rgb(161, 59, 59)"><strong>Mission to Mars</strong></h1>
+            <p></p>
             <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape the Data</a></p>
         </div>
 
         <div class="row" id="latest_news">
             <div class="col-md-12">
-                <h4>{{mars.news_title}} </h4>
-                <p>{{mars.news_p}}</p>   
+                <h4 style="color:rgb(119, 43, 43)">{{mars.news_title}} </h4>
+                <blockquote>{{mars.news_p}}</blockquote>   
             </div>
         </div>
-
+        <p></p>
         <div class="row">
-            <div class="col-md-8 justify-content-md-center whitebox rounded-sm">
-                <img src="{{mars.featured_image_url}}" class="img-fluid" style="height:500px;" alt="mars_photo">   
+            <div class="col-md-8 whitebox">
+                <img src="{{mars.featured_image_url}}" class="img-fluid max-width: 100%;" style="height: auto;" alt="mars_photo">   
             </div>
-            <div class="justify-content-md-center whitebox rounded-sm col-md-4">
-                <h5>Mars Info</h5>
+            <div class="justify-content-md-center col-md-4">
+                <h5 class="text-center" style="color:rgb(119, 43, 43)"">Latest Weather Report</h5>                
+                <blockquote>{{mars.mars_weather}}</blockquote>    
 
-                {{ mars.html_table|safe }}
-
-                <h5>Latest Weather report</h5>
-                
-                <p>{{mars.mars_weather}}</p>
-            
+                <p></p>
+                <h5 class="text-center" style="color:rgb(119, 43, 43)">Mars Info</h5>
+                <div class = "row">
+                    <div class="col-md-6 text-center" style="color:rgb(119, 43, 43)">Description</div>
+                    <div class="col-md-6 text-center" style="color:rgb(119, 43, 43)">Data</div>
+                </div>
+                {{ mars.html_table|safe }}    
             </div>
         </div>
-
+        <p></p>
         <div class="row justify-content-md-center whitebox rounded-sm">
-            <h4 style="color:rgb(10, 10, 51)";>Mars Hemispheres</h4>
+            <h3 class="text-center" style="color:rgb(119, 43, 43)";>Mars Hemispheres</h3>
         </div>
+        <p></p>
         <div class="row">
             <div class="col-md-6 ">
                 <div class="whitebox2 ">
+                    <h5 class="text-center" style="color:rgb(119, 43, 43)"> {{mars.title_hem1}}</h5>
                     <img src={{mars.hem_img1_link}} class="img-fluid " alt="image"/> 
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="whitebox2">
+                    <h5 class="text-center" style="color:rgb(119, 43, 43)"> {{mars.title_hem2}}</h5>
                     <img src={{mars.hem_img2_link}}  class="img-fluid" alt="image"/> 
                 </div>
             </div>                        
@@ -61,11 +67,13 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="whitebox2">
+                    <h5 class="text-center" style="color:rgb(119, 43, 43)"> {{mars.title_hem3}}</h5>
                     <img src={{mars.hem_img3_link}}  class="img-fluid" alt="image"/> 
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="whitebox2">
+                    <h5 class="text-center" style="color:rgb(119, 43, 43)"> {{mars.title_hem4}}</h5>
                     <img src={{mars.hem_img4_link}}  class="img-fluid" alt="image"/> 
                 </div>
             </div>                        

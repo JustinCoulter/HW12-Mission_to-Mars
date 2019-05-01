@@ -49,6 +49,8 @@ def scrape():
     browser.visit(url)
     tables = pd.read_html(url)
     df = tables[0]
+    df = df.rename(columns={0: "", 1: ""})
+ 
     html_table = df.to_html()
 
     url = 'https://twitter.com/marswxreport?lang=en'
@@ -130,9 +132,13 @@ def scrape():
         "featured_image_url": featured_image_url,
         "mars_weather": mars_weather,
         "html_table": html_table,
+        "title_hem1": title_hem1,
         "hem_img1_link": hem_img1_link,
+        "title_hem2": title_hem2,
         "hem_img2_link": hem_img2_link,
+        "title_hem3": title_hem3,
         "hem_img3_link": hem_img3_link,
+        "title_hem4": title_hem4,
         "hem_img4_link": hem_img4_link
     }
 
